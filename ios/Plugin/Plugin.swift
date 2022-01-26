@@ -180,15 +180,15 @@ public class IntercomPlugin: CAPPlugin {
     call.reject("Not implemented on iOS");
   }
 
-  @objc func displayCarousell(_ call: CAPPluginCall) {
-    let carousell = call.getString("id")
+  @objc func displayCarousel(_ call: CAPPluginCall) {
+    let carousel = call.getString("id")
     
-    if (carousell != nil) {
-      Intercom.presentCarousel(carousell!)
+    if (carousel != nil) {
+      Intercom.presentCarousel(carousel!)
         call.resolve()
-      print("carousell id sent to intercom")
+      print("carousel id sent to intercom")
     } else {
-        call.reject("Carousell id not found.", "NOT_FOUND")
+        call.reject("Carousel id not found.", "NOT_FOUND")
     }
   }
 }
